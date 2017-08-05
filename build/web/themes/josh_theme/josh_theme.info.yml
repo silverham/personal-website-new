@@ -1,0 +1,12 @@
+core: 8.x
+type: theme
+
+name: 'Josh Theme'
+description: 'Josh theme.'
+package: JOSH
+
+base theme: classy
+
+libraries:
+  - 'josh_theme/global-css'
+  - 'josh_theme/global-js'
