@@ -1,12 +1,17 @@
 {
   "dependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-babel": "^6.1.2",
     "gulp-sass": "^3.1.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.0",
     "gulp": "^3.9.1"
   }
 }

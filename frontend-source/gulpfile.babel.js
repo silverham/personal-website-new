@@ -12,6 +12,11 @@ var babel = require('gulp-babel');
 var path = require('path');
 var del = require('del');
 
+var babelify = require('babelify');
+var browserify = require("browserify");
+var source = require("vinyl-source-stream");
+
+
 // Config.
 const destination = '../build/web/themes/josh_theme/assets';
 
@@ -28,9 +33,18 @@ gulp.task('compile-sass', function (done) {
 
 // JS.
 gulp.task('compile-js', function (done) {
-  gulp.src('./src/js/**/*.js')
-    .pipe(babel())
-    .pipe(gulp.dest(destination + '/js'));
+  //gulp.src('./src/js/**/*.js')
+  //  .pipe(babel())
+  //  .pipe(gulp.dest(destination + '/js'));
+  return browserify({
+    entries: ["./src/js/main.js"]
+  })
+  .transform(babelify)
+  .bundle()
+  .pipe(source("main.js"))
+  .pipe(gulp.dest(destination + '/js'))
+  ;
+
   done();
 });
 
