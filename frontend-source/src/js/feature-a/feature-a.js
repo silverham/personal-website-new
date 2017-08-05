@@ -1,4 +1,12 @@
-// module.js
-export default function() {
-  alert("DONE2222");
+/**
+ * @file
+ * Module.js.
+ */
+
+/**
+ * Default function.
+ */
+export default function () {
+  'use strict';
+  /* Code here */
 }

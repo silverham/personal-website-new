@@ -1,6 +1,10 @@
-// main.js
-import hello from './feature-a/feature-a.js'; // or './module'
-let val = hello(); // val is "Hello";
+/**
+ * @file
+ * Main.js.
+ */
 
+'use strict';
 
-alert("DONE");
+import mymodule from './feature-a/feature-a.js';
+// Run default function from js file.
+mymodule();

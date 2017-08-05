@@ -15,6 +15,8 @@ var del = require('del');
 var babelify = require('babelify');
 var browserify = require("browserify");
 var source = require("vinyl-source-stream");
+var sourcemaps = require('gulp-sourcemaps');
+var buffer = require('vinyl-buffer');
 
 
 // Config.
@@ -25,25 +27,34 @@ const destination = '../build/web/themes/josh_theme/assets';
 // A. --------------------------------------------------------.
 // SASS/CSS.
 gulp.task('compile-sass', function (done) {
-  gulp.src('./src/scss/**/*.scss')
+  gulp.src('./src/scss/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(destination + '/css'));
   done();
 });
 
 // JS.
 gulp.task('compile-js', function (done) {
+	// @codingStandardsIgnoreStart
+	// No extra module requiring code - just es6 code.
   //gulp.src('./src/js/**/*.js')
   //  .pipe(babel())
   //  .pipe(gulp.dest(destination + '/js'));
+  // @codingStandardsIgnoreEnd
   return browserify({
     entries: ["./src/js/main.js"]
   })
   .transform(babelify)
   .bundle()
   .pipe(source("main.js"))
-  .pipe(gulp.dest(destination + '/js'))
-  ;
+  // Create source map.
+  .pipe(buffer())
+  .pipe(sourcemaps.init({loadMaps: true}))
+  .pipe(sourcemaps.write('.'))
+  // Create source map - END.
+  .pipe(gulp.dest(destination + '/js'));
 
   done();
 });
@@ -52,7 +63,7 @@ gulp.task('compile-js', function (done) {
 gulp.task('watch', function (done) {
   console.log('Started watching...');
   gulp.watch(['./src/scss/**/*.scss'], gulp.series('compile-sass'));
-  gulp.watch(['./src/js/*.js'], gulp.series('compile-js'));
+  gulp.watch(['./src/js/**/*.js'], gulp.series('compile-js'));
   done();
 });
 
