@@ -1,0 +1,20 @@
+uuid: 478b9244-f2f3-41a5-8f0e-ac665496389c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - josh_theme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: josh_theme_local_actions
+theme: josh_theme
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

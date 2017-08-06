@@ -1,0 +1,25 @@
+uuid: ec6e8fd8-83c6-472e-a6b5-86d6a63ef58d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - josh_theme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: josh_theme_branding
+theme: josh_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

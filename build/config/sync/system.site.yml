@@ -1,0 +1,14 @@
+uuid: 18ced0a2-a6bb-43e3-a3cc-6edb670564a8
+name: 'Joshua Graham'
+mail: josh@joshuagraham.id.au
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

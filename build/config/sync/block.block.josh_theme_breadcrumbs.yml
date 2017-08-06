@@ -1,0 +1,22 @@
+uuid: 95e200ce-dcbb-453b-89ec-e623a2085ad2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - josh_theme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: josh_theme_breadcrumbs
+theme: josh_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
