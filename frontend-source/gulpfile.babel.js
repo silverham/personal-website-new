@@ -18,9 +18,8 @@ var source = require("vinyl-source-stream");
 var sourcemaps = require('gulp-sourcemaps');
 var buffer = require('vinyl-buffer');
 
-
 // Config.
-const destination = '../build/web/themes/josh_theme/assets';
+const destination = '../build/web/themes/custom/josh_theme/assets';
 
 // A. --------------------------------------------------------.
 // Helper tasks.
@@ -43,10 +42,16 @@ gulp.task('compile-js', function (done) {
   //  .pipe(babel())
   //  .pipe(gulp.dest(destination + '/js'));
   // @codingStandardsIgnoreEnd
-  return browserify({
-    entries: ["./src/js/main.js"]
+  return browserify(
+    "./src/js/main.js",
+    {
+      debug:true
+    }
+  )
+  .transform(babelify, {
+    presets: ["env"],
+    sourceMaps: true
   })
-  .transform(babelify)
   .bundle()
   .pipe(source("main.js"))
   // Create source map.
