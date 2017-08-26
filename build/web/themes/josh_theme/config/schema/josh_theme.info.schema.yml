@@ -1,5 +1,0 @@
-# Schema for the theme setting configuration file of the AIP theme.
-
-THEMENAME.settings:
-  type: aip_settings
-  label: 'AIP settings'

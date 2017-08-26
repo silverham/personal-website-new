@@ -10,15 +10,6 @@ exports.default = function () {
   /* Code here */
 };
 
-module.exports = exports['default']; /**
-                                      * @file
-                                      * Module.js.
-                                      */
-
-/**
- * Default function.
- */
-
 },{}],2:[function(require,module,exports){
 /**
  * @file
@@ -36,6 +27,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // Run default function from js file.
 (0, _featureA2.default)();
 
-},{"./feature-a/feature-a.js":1}]},{},[2]);
+},{"./feature-a/feature-a.js":1}]},{},[2])
 
 //# sourceMappingURL=main.js.map
