@@ -25,3 +25,5 @@
 
 # CUSTOM
 /web/sites/development.services.yml
+/.editorconfig
+/.gitattributes
