@@ -1,17 +1,17 @@
-uuid: 95e200ce-dcbb-453b-89ec-e623a2085ad2
+uuid: bfdb9552-4b17-4538-95c8-e5e4cb78a291
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - josh_theme
+    - bootstrap
 _core:
-  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
-id: josh_theme_breadcrumbs
-theme: josh_theme
-region: navigation
-weight: 0
+  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+id: bootstrap_breadcrumbs
+theme: bootstrap
+region: header
+weight: -100
 provider: null
 plugin: system_breadcrumb_block
 settings:

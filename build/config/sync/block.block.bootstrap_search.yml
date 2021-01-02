@@ -1,16 +1,16 @@
-uuid: 56494976-46e1-48ba-993a-5b9522b1f430
+uuid: 6574b196-e6ed-4731-a9db-cd89b46439bb
 langcode: en
 status: true
 dependencies:
   module:
     - search
   theme:
-    - josh_theme
+    - bootstrap
 _core:
-  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
-id: josh_theme_search
-theme: josh_theme
-region: sidebar_first
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: bootstrap_search
+theme: bootstrap
+region: sidebar_second
 weight: -1
 provider: null
 plugin: search_form_block
