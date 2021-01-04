@@ -1,0 +1,22 @@
+uuid: fcbde542-4271-4dd9-88de-27b266d1520a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - josh_front
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: josh_front_content
+theme: josh_front
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

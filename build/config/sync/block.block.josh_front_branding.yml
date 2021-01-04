@@ -1,0 +1,25 @@
+uuid: d28da417-ac96-4d59-ab94-3fb113c4630c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - josh_front
+_core:
+  default_config_hash: Cy3vkpYrD1O5JG-BeEnokF0bByHYDEa8CBfWivB4_SQ
+id: josh_front_branding
+theme: josh_front
+region: header
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

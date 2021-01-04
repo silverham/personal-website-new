@@ -1,0 +1,22 @@
+uuid: 1b69f6c3-47b0-4ae1-b6fb-52ca22466212
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - josh_front
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: josh_front_help
+theme: josh_front
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

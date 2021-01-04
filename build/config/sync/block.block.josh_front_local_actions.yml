@@ -1,0 +1,20 @@
+uuid: ba1f93ba-811b-42ee-a9db-2374e9ca13c4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - josh_front
+_core:
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: josh_front_local_actions
+theme: josh_front
+region: admin
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

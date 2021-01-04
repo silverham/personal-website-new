@@ -1,0 +1,22 @@
+uuid: 2a19940b-4f8f-4c13-88f2-f01ffc9afb2e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - josh_front
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: josh_front_local_tasks
+theme: josh_front
+region: admin
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
