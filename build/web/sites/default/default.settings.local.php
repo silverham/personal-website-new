@@ -154,6 +154,11 @@ $settings['skip_permissions_hardening'] = TRUE;
  */
 # $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
 
+/**
+ * Disable Google Analytics from sending dev GA data.
+ */
+//$config['google_analytics.settings']['account'] = 'UA-XXXXXXXX-YY';
+
 //$settings['trusted_host_patterns'] = [];
 
 $settings['hash_salt'] = 'A RANDOM VALUE A RANDOM VALUE A RANDOM VALUE A RANDOM VALUE A RANDOM VALUE';
