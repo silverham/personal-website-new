@@ -1,3 +1,4 @@
+# Theme
 global-css:
   css:
     theme:
@@ -6,5 +7,17 @@ global-css:
 global-js:
   js:
     assets/js/main.js: {}
+  dependencies:
+   - core/jquery
+
+# Bootstrap
+bootstrap-css:
+  css:
+    theme:
+      assets/bootstrap/bootstrap.min.css: {}
+
+bootstrap-js:
+  js:
+    assets/bootstrap/bootstrap.bundle.min.js: {}
   dependencies:
    - core/jquery

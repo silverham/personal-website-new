@@ -7,6 +7,8 @@ package: JOSH
 base theme: classy
 
 libraries:
+  - 'josh_front/bootstrap-js'
+  - 'josh_front/bootstrap-css'
   - 'josh_front/global-css'
   - 'josh_front/global-js'
 
