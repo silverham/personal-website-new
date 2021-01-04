@@ -1,0 +1,49 @@
+core: 8.x
+type: theme
+
+name: 'Josh Front'
+description: 'Josh Front.'
+package: JOSH
+base theme: classy
+
+libraries:
+  - 'josh_front/global-css'
+  - 'josh_front/global-js'
+
+# Inject extra css into ckeditor in backend
+# @see https://drupal.stackexchange.com/questions/225528/how-to-load-theme-styles-in-ckeditor
+# @see http://www.drupalthemer.org/blog/drupal-8-how-to-ckeditor-custom-styles
+ckeditor_stylesheets:
+  - assets/css/ckeditor-custom.css
+
+# Default regions are listed here:
+# Drupal\Core\Extension\ThemeExtensionList::$defaults.
+regions:
+  header: 'Header'
+
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+
+  admin: 'Admin tasks'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  breadcrumb: 'Breadcrumb'
+
+  content_before_outside: 'Content Before (outside)'
+
+  page_title: 'Page Title'
+  content_before: 'Content Before'
+  content: 'Content'
+  content_after: 'Content After'
+
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+
+  content_after_outside: 'Content After (outside)'
+
+  footer: 'Footer'
+
+  # Hidden regions, do not remove in html.html.twig.
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  # End Hidden regions.

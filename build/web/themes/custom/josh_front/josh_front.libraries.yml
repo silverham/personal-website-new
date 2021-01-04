@@ -1,7 +1,9 @@
-global-styling:
+global-css:
   css:
     theme:
       assets/css/main.css: {}
+
+global-js:
   js:
     assets/js/main.js: {}
   dependencies:

@@ -8,21 +8,22 @@
  * in a inc file, which is included by this file.
  */
 
-$theme_dir = version_compare(phpversion(), '5.3.10', '<') ? dirname(__FILE__) : __DIR__;
+$theme_dir = __DIR__;
+$theme_name = 'josh_front';
 
 /**
  * Include template functions from the includes folder.
  *
- * Naming convention for inlclude files should be {file_name}.inc.
+ * Naming convention for inlclude files should be {theme_name}.{file_name}.inc.
  */
 $include_locations = [
-  '/includes/*.inc',
-  '/includes/*/*.inc',
-  '/includes/*/*/*.inc',
+  "includes/{$theme_name}.*.inc",
+  "includes/*/{$theme_name}.*.inc",
+  "includes/*/*/{$theme_name}.*.inc",
 ];
 
 foreach ($include_locations as $include_location) {
-  foreach (glob($theme_dir . $include_location) as $filename) {
+  foreach (glob("{$theme_dir}/{$include_location}") as $filename) {
     require_once $filename;
   }
 }

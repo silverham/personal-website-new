@@ -1,1 +1,1 @@
-# Place *.inc files here - they will be automatcially included.
+# Place {theme name}.*.inc files here - they will be automatcially included.
