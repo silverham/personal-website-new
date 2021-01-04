@@ -19,7 +19,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var buffer = require('vinyl-buffer');
 
 // Config.
-const destination = '../build/web/themes/custom/josh_theme/assets';
+const destination = '../build/web/themes/custom/josh_front/assets';
 
 // A. --------------------------------------------------------.
 // Helper tasks.
