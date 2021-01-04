@@ -2,24 +2,40 @@ module:
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  adminimal_admin_toolbar: 0
   automated_cron: 0
   block: 0
   block_content: 0
   breakpoint: 0
+  captcha: 0
   chosen: 0
   chosen_field: 0
   chosen_lib: 0
   ckeditor: 0
   color: 0
   config: 0
+  config_filter: 0
+  config_ignore: 0
+  config_split: 0
   contact: 0
   content_moderation: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
+  diff: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
+  event_log_track: 0
+  event_log_track_auth: 0
+  event_log_track_file: 0
+  event_log_track_media: 0
+  event_log_track_menu: 0
+  event_log_track_node: 0
+  event_log_track_taxonomy: 0
+  event_log_track_user: 0
+  event_log_track_workflows: 0
   field: 0
   field_ui: 0
   file: 0
@@ -29,10 +45,14 @@ module:
   image: 0
   inline_form_errors: 0
   link: 0
+  linkit: 0
+  mailsystem: 0
   media: 0
+  media_entity_file_replace: 0
   media_library: 0
   menu_ui: 0
   metatag: 0
+  module_filter: 0
   node: 0
   options: 0
   page_cache: 0
@@ -40,10 +60,13 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  recaptcha: 0
+  redirect: 0
   search: 0
   search_api: 0
   search_api_db: 0
   shortcut: 0
+  swiftmailer: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -52,8 +75,12 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webform: 0
+  webform_ui: 0
   workflows: 0
   menu_link_content: 1
+  pathauto: 1
+  webform_bootstrap: 1
   views: 10
   paragraphs: 11
   standard: 1000
