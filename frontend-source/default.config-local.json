@@ -1,4 +1,8 @@
 {
-  "browserSyncProxy" : "your_local_url",
-  "browserSyncPort" : 3000
+  "browserSyncProxy" : "http://your_local_url:8080",
+  "browserSyncPort" : 3000,
+  "//" : "Make same domain name as above to avoid error:",
+  "//" : "`Redirects to external URLs are not allowed by default` on cache clear.",
+  "//" : " e.g. `drupal8.localtest.me`.",
+  "browserSyncHost" : "your_local_url"
 }

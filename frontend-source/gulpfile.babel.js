@@ -107,6 +107,7 @@ gulp.task('browserSync', function() {
   browserSync.init({
     proxy: configLocal.browserSyncProxy,
     port: configLocal.browserSyncPort,
+    listen: configLocal.browserSyncHost,
   });
 });
 
