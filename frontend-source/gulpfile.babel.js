@@ -49,7 +49,7 @@ gulp.task('compile-js', function (done) {
     }
   )
   .transform(babelify, {
-    presets: ["env"],
+    // Presents are merged from `.babelrc`.
     sourceMaps: true
   })
   .bundle()
