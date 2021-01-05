@@ -16,7 +16,7 @@ libraries:
 # @see https://drupal.stackexchange.com/questions/225528/how-to-load-theme-styles-in-ckeditor
 # @see http://www.drupalthemer.org/blog/drupal-8-how-to-ckeditor-custom-styles
 ckeditor_stylesheets:
-  - assets/css/ckeditor-custom.css
+  - assets/ckeditor/ckeditor-custom.css
 
 # Default regions are listed here:
 # Drupal\Core\Extension\ThemeExtensionList::$defaults.
