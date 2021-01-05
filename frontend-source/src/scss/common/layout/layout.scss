@@ -23,6 +23,9 @@
     	content: ' | ';
     	color: #000;
     }
+    &:hover {
+    	text-decoration: none;
+    }
 }
 
 .site-name {
