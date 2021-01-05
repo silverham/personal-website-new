@@ -1,0 +1,4 @@
+{
+  "browserSyncProxy" : "your_local_url",
+  "browserSyncPort" : 3000
+}

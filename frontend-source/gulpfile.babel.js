@@ -18,6 +18,19 @@ var source = require("vinyl-source-stream");
 var sourcemaps = require('gulp-sourcemaps');
 var buffer = require('vinyl-buffer');
 
+const notify = require('gulp-notify');
+const browserSync = require('browser-sync').create();
+
+// Check if local config exists.
+var fs = require('fs');
+if (!fs.existsSync('./config-local.json')) {
+  console.log('\x1b[33m', 'You need to rename default.config-local.json to' +
+      ' config-local.json and update its content if necessary.', '\x1b[0m');
+  process.exit();
+}
+// Include local config.
+var configLocal = require('./config-local.json');
+
 // Config.
 const destination = '../build/web/themes/custom/josh_front/assets';
 
@@ -30,7 +43,8 @@ gulp.task('compile-sass', function (done) {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(destination + '/css'));
+    .pipe(gulp.dest(destination + '/css'))
+    .pipe(browserSync.reload({ stream: true, match: '**/*.css' }));
   done();
 });
 
@@ -59,7 +73,9 @@ gulp.task('compile-js', function (done) {
   .pipe(sourcemaps.init({loadMaps: true}))
   .pipe(sourcemaps.write('.'))
   // Create source map - END.
-  .pipe(gulp.dest(destination + '/js'));
+  .pipe(gulp.dest(destination + '/js'))
+  .pipe(browserSync.reload({ stream: true, match: '**/*.js' }))
+  .pipe(notify({message: 'Rebuild all custom scripts. Please refresh your browser', onLast: true}));
 
   done();
 });
@@ -86,6 +102,14 @@ gulp.task('clean', (done) => {
   done();
 });
 
+// BrowserSync settings.
+gulp.task('browserSync', function() {
+  browserSync.init({
+    proxy: configLocal.browserSyncProxy,
+    port: configLocal.browserSyncPort,
+  });
+});
+
 // A. --------------------------------------------------------.
 // Top level tasks.
 // A. --------------------------------------------------------.
@@ -96,7 +120,10 @@ gulp.task('default', gulp.series(
     'compile-sass',
     'compile-js'
   ),
-  'watch'
+  gulp.parallel(
+    'watch',
+    'browserSync'
+  )
 ));
 
 // Build - no watch.
