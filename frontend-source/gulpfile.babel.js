@@ -75,7 +75,12 @@ gulp.task('watch', function (done) {
 // Clean.
 gulp.task('clean', (done) => {
   del.sync(
-    [path.join(destination)],
+    [
+    path.join(destination, '**'),
+    '!' + path.join(destination),
+    '!' + path.join(destination, 'ckeditor'),
+    '!' + path.join(destination, 'bootstrap')
+    ],
     {'force':true}
   );
   done();
