@@ -41,6 +41,49 @@
     }
 }
 
+.navigation.menu--main, .navigation.menu--footer {
+	> .menu {
+		background: #000;
+		border-color: #e7e7e7;
+		border-radius: 4px;
+		padding-left: 1em;
+		margin-left: 0;
+		margin-bottom: 10px;
+		> .menu-item {
+			@media (min-width: 768px) {
+				float: left;
+			}
+			a {
+				color: #777;
+				padding-top: 15px;
+    			line-height: 20px;
+    			display: block;
+    			padding: 10px 15px;
+    			text-decoration: none;
+    			padding-bottom: 13px;
+    			&.is-active {
+    				color: #ffffff;
+    			}
+    			&:hover {
+    				color: #ffffff;
+    				background-color: #3E3C3C;
+    			}
+			}
+		}
+		// Force border.
+		&:after {
+			clear: both;
+		    content: '';
+		    display: table;
+		}
+	}
+}
+
+.region-primary-menu:after {
+	clear: both;
+	content: '';
+	display: table;
+}
 
 .layout-content-container {
 	display: flex;
