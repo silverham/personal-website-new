@@ -2,6 +2,11 @@ uuid: dc22bff8-d20e-4b81-8d4c-d430a0e558c1
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.article
+    - node.type.error_403
+    - node.type.error_404
+    - node.type.page
   module:
     - content_moderation
 _core:
@@ -59,5 +64,10 @@ type_settings:
       from:
         - draft
         - published
-  entity_types: {  }
+  entity_types:
+    node:
+      - article
+      - error_403
+      - error_404
+      - page
   default_moderation_state: draft
