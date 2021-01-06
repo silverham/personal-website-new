@@ -41,6 +41,28 @@
     }
 }
 
+
+.layout-content-container {
+	display: flex;
+
+	&.has-sidebars {
+		.layout-content {
+			flex: 4;
+		}
+		.layout-sidebar-second {
+			flex: 1;
+		}
+	}
+	.layout-content {
+		padding: 10px;
+   		padding-top: 0;
+	}
+	.layout-sidebar-second {
+		flex: 1;
+		padding-bottom: 1em;
+	}
+}
+
 /*
  * Stop images expanding past their parent div.
  */
