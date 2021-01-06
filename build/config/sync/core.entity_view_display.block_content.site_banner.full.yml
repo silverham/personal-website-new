@@ -1,0 +1,28 @@
+uuid: 2640c504-8067-4901-a6c4-255e7a3ac02e
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.site_banner
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.site_banner.body
+    - field.field.block_content.site_banner.field_media_image
+  module:
+    - media
+id: block_content.site_banner.full
+targetEntityType: block_content
+bundle: site_banner
+mode: full
+content:
+  field_media_image:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  search_api_excerpt: true

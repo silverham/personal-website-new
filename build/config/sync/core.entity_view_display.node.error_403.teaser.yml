@@ -1,0 +1,31 @@
+uuid: 70706075-7cbb-4a1a-ab5b-a43924ba3ece
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.error_403.body
+    - node.type.error_403
+  module:
+    - text
+    - user
+id: node.error_403.teaser
+targetEntityType: node
+bundle: error_403
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

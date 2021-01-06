@@ -1,4 +1,43 @@
-/* Specific CSS code here */
-/* more scss imports here */
+/* Main SCSS */
+/**
+ * The Main css file for the website
+ */
+/**
+ *  The General Layout Parts
+ */
+.layout-container {
+  background-color: #f8f8f8;
+  margin-top: 1em;
+  border: 1px solid #ccc; }
+
+/**
+ * Header.
+ */
+.site-logo {
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: 2.5rem; }
+  .site-logo:after {
+    content: ' | ';
+    color: #000; }
+  .site-logo:hover {
+    text-decoration: none; }
+
+.site-name {
+  display: inline-block;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2; }
+  .site-name a {
+    color: #000; }
+
+/*
+ * Stop images expanding past their parent div.
+ */
+img {
+  max-width: 100%;
+  max-height: 100%; }
 
 /*# sourceMappingURL=main.css.map */

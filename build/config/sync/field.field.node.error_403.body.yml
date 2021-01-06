@@ -1,0 +1,23 @@
+uuid: 92082c79-4642-4da3-b937-e389170eaa86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.error_403
+  module:
+    - text
+id: node.error_403.body
+field_name: body
+entity_type: node
+bundle: error_403
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

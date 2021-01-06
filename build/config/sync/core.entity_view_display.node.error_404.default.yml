@@ -1,0 +1,29 @@
+uuid: e51337a5-410f-4a28-88a3-937fd6cd18ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.error_404.body
+    - node.type.error_404
+  module:
+    - text
+    - user
+id: node.error_404.default
+targetEntityType: node
+bundle: error_404
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true
