@@ -44,6 +44,7 @@ module:
   help: 0
   image: 0
   inline_form_errors: 0
+  josh_custom: 0
   link: 0
   linkit: 0
   mailsystem: 0
