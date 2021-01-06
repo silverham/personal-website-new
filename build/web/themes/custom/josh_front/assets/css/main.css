@@ -33,6 +33,52 @@
   .site-name a {
     color: #000; }
 
+.navigation.menu--main > .menu, .navigation.menu--footer > .menu {
+  background: #000;
+  border-color: #e7e7e7;
+  border-radius: 4px;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 10px; }
+  @media (min-width: 768px) {
+    .navigation.menu--main > .menu > .menu-item, .navigation.menu--footer > .menu > .menu-item {
+      float: left; } }
+  .navigation.menu--main > .menu > .menu-item a, .navigation.menu--footer > .menu > .menu-item a {
+    color: #777;
+    padding-top: 15px;
+    line-height: 20px;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    padding-bottom: 13px; }
+    .navigation.menu--main > .menu > .menu-item a.is-active, .navigation.menu--footer > .menu > .menu-item a.is-active {
+      color: #ffffff; }
+    .navigation.menu--main > .menu > .menu-item a:hover, .navigation.menu--footer > .menu > .menu-item a:hover {
+      color: #ffffff;
+      background-color: #3E3C3C; }
+  .navigation.menu--main > .menu:after, .navigation.menu--footer > .menu:after {
+    clear: both;
+    content: '';
+    display: table; }
+
+.region-primary-menu:after {
+  clear: both;
+  content: '';
+  display: table; }
+
+.layout-content-container {
+  display: flex; }
+  .layout-content-container.has-sidebars .layout-content {
+    flex: 4; }
+  .layout-content-container.has-sidebars .layout-sidebar-second {
+    flex: 1; }
+  .layout-content-container .layout-content {
+    padding: 10px;
+    padding-top: 0; }
+  .layout-content-container .layout-sidebar-second {
+    flex: 1;
+    padding-bottom: 1em; }
+
 /*
  * Stop images expanding past their parent div.
  */
