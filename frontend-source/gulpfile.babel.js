@@ -94,8 +94,9 @@ gulp.task('clean', (done) => {
     [
     path.join(destination, '**'),
     '!' + path.join(destination),
+    '!' + path.join(destination, 'bootstrap'),
     '!' + path.join(destination, 'ckeditor'),
-    '!' + path.join(destination, 'bootstrap')
+    '!' + path.join(destination, 'images')
     ],
     {'force':true}
   );
