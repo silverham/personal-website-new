@@ -66,6 +66,9 @@
   content: '';
   display: table; }
 
+.breadcrumb {
+  margin-bottom: 0; }
+
 .layout-content-container {
   display: flex; }
   .layout-content-container.has-sidebars .layout-content {
