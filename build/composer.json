@@ -126,11 +126,6 @@
             "drupal/google_analytics": {
                "Fatal error when there is a view with the path search/node":  "https://www.drupal.org/files/issues/2018-06-18/patch_google_analytics.patch"
             },
-            "drupal/simple_sitemap": {
-                "Undefined index: changefreq Notice message - https://www.drupal.org/project/simple_sitemap/issues/3070132": "https://www.drupal.org/files/issues/2020-03-04/3070132-changefreq-notice-message.patch",
-                "Undefined index: include_images in FormHelper.php on line 361 - https://www.drupal.org/project/simple_sitemap/issues/3114593":
-                "https://www.drupal.org/files/issues/2020-02-19/include_images.patch"
-            },
             "drupal/swiftmailer": {
                 "Exception on sending (probably when from/to malformed) - https://www.drupal.org/project/swiftmailer/issues/3167898":
                 "https://www.drupal.org/files/issues/2020-09-03/swiftmailer-3167898-03.patch"
