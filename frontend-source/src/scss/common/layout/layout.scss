@@ -85,6 +85,11 @@
 	display: table;
 }
 
+.breadcrumb {
+	// Bootstrap has too much padding.
+	margin-bottom: 0;
+}
+
 .layout-content-container {
 	display: flex;
 
