@@ -1,0 +1,19 @@
+uuid: 57cd0ab4-9fbb-4462-841c-3f22407fcf8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_code
+    - paragraphs.paragraphs_type.extra_code
+id: paragraph.extra_code.field_code
+field_name: field_code
+entity_type: paragraph
+bundle: extra_code
+label: Code
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

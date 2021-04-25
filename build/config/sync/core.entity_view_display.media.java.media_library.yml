@@ -1,0 +1,31 @@
+uuid: 8fd3b1f3-1789-413c-b902-fafe38efeee3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.java.field_media_file
+    - image.style.medium
+    - media.type.java
+  module:
+    - image
+id: media.java.media_library
+targetEntityType: media
+bundle: java
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_file: true
+  name: true
+  search_api_excerpt: true
+  uid: true

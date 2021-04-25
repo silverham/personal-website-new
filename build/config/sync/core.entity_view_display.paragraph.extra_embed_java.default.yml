@@ -1,0 +1,23 @@
+uuid: cef6dc43-48f2-44a7-8c16-59a86a839d55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.extra_embed_java.field_media_java
+    - paragraphs.paragraphs_type.extra_embed_java
+id: paragraph.extra_embed_java.default
+targetEntityType: paragraph
+bundle: extra_embed_java
+mode: default
+content:
+  field_media_java:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

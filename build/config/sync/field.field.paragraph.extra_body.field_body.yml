@@ -1,0 +1,21 @@
+uuid: b2461750-d3c5-4708-ba85-2e94f05213de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.extra_body
+  module:
+    - text
+id: paragraph.extra_body.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: extra_body
+label: Body
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

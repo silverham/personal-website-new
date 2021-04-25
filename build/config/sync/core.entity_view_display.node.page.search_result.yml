@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.page.body
+    - field.field.node.page.field_components
     - node.type.page
   module:
     - text
@@ -24,10 +25,16 @@ content:
     third_party_settings: {  }
     label: hidden
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 101
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
+  field_components: true
   search_api_excerpt: true

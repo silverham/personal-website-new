@@ -1,0 +1,23 @@
+uuid: e0ab810b-7dfa-48e2-9558-1836ce826f6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.extra_code.field_code
+    - paragraphs.paragraphs_type.extra_code
+id: paragraph.extra_code.default
+targetEntityType: paragraph
+bundle: extra_code
+mode: default
+content:
+  field_code:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true

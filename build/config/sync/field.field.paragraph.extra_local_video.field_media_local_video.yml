@@ -1,0 +1,28 @@
+uuid: ab277d70-8d7e-4080-9b25-df35fff05f88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_local_video
+    - media.type.video
+    - paragraphs.paragraphs_type.extra_local_video
+id: paragraph.extra_local_video.field_media_local_video
+field_name: field_media_local_video
+entity_type: paragraph
+bundle: extra_local_video
+label: 'Media Local Video'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

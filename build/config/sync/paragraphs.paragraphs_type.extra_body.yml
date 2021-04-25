@@ -1,0 +1,10 @@
+uuid: 3a6cff44-b5eb-480a-aea3-77c90d779f2c
+langcode: en
+status: true
+dependencies: {  }
+id: extra_body
+label: 'Extra Body'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

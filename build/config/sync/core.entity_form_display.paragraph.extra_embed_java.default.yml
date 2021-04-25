@@ -1,0 +1,24 @@
+uuid: b48c81ae-c072-4f15-b31a-8af8986f47bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.extra_embed_java.field_media_java
+    - paragraphs.paragraphs_type.extra_embed_java
+  module:
+    - media_library
+id: paragraph.extra_embed_java.default
+targetEntityType: paragraph
+bundle: extra_embed_java
+mode: default
+content:
+  field_media_java:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

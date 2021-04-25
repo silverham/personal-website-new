@@ -1,0 +1,10 @@
+uuid: 9dd8f6cf-70a0-4bf4-a890-64593cbcb0da
+langcode: en
+status: true
+dependencies: {  }
+id: extra_embed_java
+label: 'Extra Embed Java'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
