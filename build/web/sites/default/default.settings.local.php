@@ -176,3 +176,8 @@ $databases['default']['default'] = [
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 ];
+
+// Dev config used.
+// Leave uncommented on PROD.
+// @see https://www.drupal.org/docs/8/modules/configuration-split/creating-a-simple-split-configuration-dev-modules-only-in-dev
+$config['config_split.config_split.dev']['status'] = TRUE;
