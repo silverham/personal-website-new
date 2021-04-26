@@ -1,0 +1,29 @@
+uuid: 56c0856d-70c5-4c0e-ae93-cec799d4704e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - josh_front
+id: josh_front_main_menu_left_sidebar
+theme: josh_front
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation Sidebar'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 2
+  depth: 2
+  expand: false
+  parent: 'main:'
+  suggestion: main__sidebar
+visibility: {  }
