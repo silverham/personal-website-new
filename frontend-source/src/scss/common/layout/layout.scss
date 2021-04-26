@@ -41,7 +41,8 @@
     }
 }
 
-.navigation.menu--main, .navigation.menu--footer {
+#block-josh-front-main-menu.navigation.menu--main,
+#block-josh-front-footer.navigation.menu--footer {
 	> .menu {
 		background: #000;
 		border-color: #e7e7e7;
@@ -94,11 +95,17 @@
 	display: flex;
 
 	&.has-sidebars {
+		.layout-sidebar-first {
+			flex: 1;
+			order: 0;
+		}
 		.layout-content {
 			flex: 4;
+			order: 1;
 		}
 		.layout-sidebar-second {
 			flex: 1;
+			order: 2;
 		}
 	}
 	.layout-content {
@@ -106,7 +113,6 @@
    		padding-top: 0;
 	}
 	.layout-sidebar-second {
-		flex: 1;
 		padding-bottom: 1em;
 	}
 }

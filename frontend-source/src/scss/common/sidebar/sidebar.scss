@@ -1,0 +1,14 @@
+#block-josh-front-main-menu-left-sidebar.navigation.menu--main {
+
+    a {
+        /* Highlight current */
+        &.is-active {
+            &,
+            &:hover,
+            &:focus {
+                color: #fff;
+                background-color: #428bca;
+            }
+        }
+    }
+}

@@ -76,10 +76,16 @@
     {% set has_sidebar_second = page.sidebar_second and ('<div' in page.sidebar_second|render|render) %}
 
     {% set layout_content_container_attributes = create_attribute({'class': ['layout-content-container']}) %}
-    {% if has_sidebar_second or has_sidebar_second %}
+    {% if has_sidebar_first or has_sidebar_second %}
       {% set layout_content_container_attributes = layout_content_container_attributes.addClass('has-sidebars') %}
     {% else %}
       {% set layout_content_container_attributes = layout_content_container_attributes.addClass('full-width') %}
+    {% endif %}
+    {% if (has_sidebar_first and not has_sidebar_second) or (has_sidebar_second and not has_sidebar_first)  %}
+      {% set layout_content_container_attributes = layout_content_container_attributes.addClass('has-one-sidebar') %}
+    {% endif %}
+    {% if has_sidebar_first and has_sidebar_second %}
+      {% set layout_content_container_attributes = layout_content_container_attributes.addClass('has-both-sidebars') %}
     {% endif %}
     {% if has_sidebar_first %}
       {% set layout_content_container_attributes = layout_content_container_attributes.addClass('has-sidebar-first') %}
@@ -98,13 +104,13 @@
         {{ page.content_after }}
       </div>{# /.layout-content #}
 
-      {% if page.sidebar_first  %}
+      {% if has_sidebar_first  %}
         <aside class="layout-sidebar-first" role="complementary">
           {{ page.sidebar_first }}
         </aside>
       {% endif %}
 
-      {% if page.sidebar_second %}
+      {% if has_sidebar_second %}
         <aside class="layout-sidebar-second" role="complementary">
           {{ page.sidebar_second }}
         </aside>
