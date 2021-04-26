@@ -37,6 +37,7 @@ settings:
         -
           name: 'Block Formatting'
           items:
+            - Styles
             - Format
         -
           name: Tools
@@ -46,7 +47,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: 'a.btn.btn-primary|Primary Button'
     linkit:
       linkit_profile: ''
 image_upload:
