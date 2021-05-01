@@ -43,6 +43,7 @@
         "drupal/devel": "^2.0",
         "drupal/diff": "^1.0",
         "drupal/events_log_track": "^2.0",
+        "drupal/field_group": "^3.1",
         "drupal/google_analytics": "^3.0",
         "drupal/linkit": "^4.3",
         "drupal/media_entity_file_replace": "^1.0@beta",
