@@ -55,7 +55,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: 'a.btn.btn-primary|Primary Button'
+      styles: "a.btn.btn-primary|Primary Button\r\na.btn.btn-info|Info Button\r\n"
     linkit:
       linkit_profile: ''
 image_upload:
