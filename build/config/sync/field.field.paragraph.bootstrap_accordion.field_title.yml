@@ -1,0 +1,19 @@
+uuid: 6f0eda30-61cb-45f1-afe9-65b8a274965e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.bootstrap_accordion
+id: paragraph.bootstrap_accordion.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: bootstrap_accordion
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
