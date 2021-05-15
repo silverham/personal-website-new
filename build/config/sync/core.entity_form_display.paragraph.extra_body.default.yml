@@ -15,10 +15,10 @@ content:
   field_body:
     weight: 0
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
+    type: text_textarea
     region: content
 hidden:
   created: true
