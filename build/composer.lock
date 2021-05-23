@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6abf57d6a1a177a590ff997f18cbae33",
+    "content-hash": "f05860f7ed1b6dfb315d561086f362e3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4129,6 +4129,72 @@
                 "source": "https://git.drupalcode.org/project/metatag",
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
+            }
+        },
+        {
+            "name": "drupal/minisite",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/minisite.git",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/minisite-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "0e910ad5c6a27df5292a5e7888d62b74fa8b1c53"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "ext-zip": "*"
+            },
+            "require-dev": {
+                "drupal/pathauto": "~1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1590142688",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Joseph Zhao",
+                    "homepage": "https://www.drupal.org/user/620694",
+                    "email": "joseph.zhao@xing.net.au"
+                },
+                {
+                    "name": "Jason Guo",
+                    "homepage": "https://www.drupal.org/user/1987218",
+                    "email": "jason.guo@xing.net.au"
+                },
+                {
+                    "name": "Alex Skrypnyk",
+                    "homepage": "https://www.drupal.org/user/2906813",
+                    "email": "alex@integratedexperts.com"
+                }
+            ],
+            "description": "Upload and serve arbitrary 'minisites' archives from a Drupal website.",
+            "homepage": "https://www.drupal.org/project/minisite",
+            "keywords": [
+                "drupal",
+                "mini site",
+                "minisite"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/minisite",
+                "issues": "https://drupal.org/project/issues/minisite",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
