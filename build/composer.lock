@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f05860f7ed1b6dfb315d561086f362e3",
+    "content-hash": "67eaacefdc3211647d289fd215c1bda0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3470,6 +3470,9 @@
                     "services": {
                         "drush.services.yml": "^9"
                     }
+                },
+                "patches_applied": {
+                    "Deprecated curly brace syntax for accessing array elements": "https://www.drupal.org/files/issues/2020-01-05/3104423.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
