@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a link to a minisite java applt.
+ *
+ * Available variables:
+ * - attributes: The HTML attributes for the containing element.
+ * - link: A link to the minisite.
+ * - java_entry_filename: the name of the entry class.
+ *
+ * @see template_preprocess_minisite_link()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set url = link.getUrl().toString() %}
+{% set url_split = url|split('\/') %}
+{% set base_url = url_split|slice(0, url_split.length - 1)|join('\/') %}
+
+<span{{ attributes }}>
+  <object type="application/x-java-applet" height="400" width="650">
+    <param name="codebase" value="{{ base_url }}" />
+    <param name="code" value="{{ java_entry_filename }}" />
+    <p>Your Web Browser doesn't support Java, or it is disabled/not installed.</p>
+    <p>Note: Google Chrome & Mobile Web Browsers will not run Java.</p>
+  </object>
+</span>
+
+
