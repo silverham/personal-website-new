@@ -1,0 +1,19 @@
+uuid: 08d3e1fd-7179-4bbe-9dd8-e9c0ed2b824e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_java_entry_filename
+    - media.type.java
+id: media.java.field_java_entry_filename
+field_name: field_java_entry_filename
+entity_type: media
+bundle: java
+label: 'Java entry filename'
+description: 'The entry filename for the "code" param - without the file extension.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

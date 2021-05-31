@@ -1,0 +1,21 @@
+uuid: 478b1866-86c8-4868-9537-e54d5a689aca
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_java_entry_filename
+field_name: field_java_entry_filename
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

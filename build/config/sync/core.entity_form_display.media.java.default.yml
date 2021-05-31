@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.java.field_java_entry_filename
     - field.field.media.java.field_media_file
+    - field.field.media.java.field_media_java_minisite
     - media.type.java
   module:
-    - file
+    - minisite
     - path
 id: media.java.default
 targetEntityType: media
@@ -19,12 +21,20 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_media_file:
+  field_java_entry_filename:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_media_java_minisite:
     weight: 0
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
+    type: minisite_default
     region: content
   name:
     type: string_textfield
@@ -58,4 +68,5 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
+  field_media_file: true
   replace_file: true

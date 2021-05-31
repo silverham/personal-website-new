@@ -55,6 +55,7 @@ module:
   menu_block: 0
   menu_ui: 0
   metatag: 0
+  minisite: 0
   module_filter: 0
   node: 0
   options: 0
