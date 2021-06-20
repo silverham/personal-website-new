@@ -1,0 +1,27 @@
+{% extends "paragraph.html.twig" %}
+
+{% set collapse_id = 'paragraph--' ~ paragraph.id() %}
+
+{# Double render to force a string. #}
+{% set field_body = content.field_body|render|render %}
+
+{% set collapse_link %}
+  <a class="collapsed" role="button" data-toggle="collapse" href="#{{ collapse_id }}" aria-expanded="false" aria-controls="collapseExample">{{ '$1'|raw }}</a>
+{% endset %}
+
+{# Double back slash required for twig #}
+{% set field_body = field_body|preg_replace('/\\[collapse\\]([\\s\\S]+?)\\[\\/collapse\\]/xi', collapse_link) %}
+
+{% set content %}
+
+<div class="alert alert-info panel-heading">
+  {# Already rendered #}
+  {{ field_body|raw }}
+  <div id="{{ collapse_id }}" class="panel-collapse collapse" aria-expanded="false">
+    <div class="panel-body">
+      {{ content|without('field_body') }}
+    </div>
+  </div>
+</div>
+
+{% endset %}
