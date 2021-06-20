@@ -1,0 +1,21 @@
+uuid: 961b1e78-a2fa-4988-b297-caf51c5a4ea5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.bootstrap_accordion_alert
+  module:
+    - text
+id: paragraph.bootstrap_accordion_alert.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: bootstrap_accordion_alert
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

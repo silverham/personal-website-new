@@ -1,0 +1,10 @@
+uuid: 016e91a6-6361-4737-a205-ee7a13f4e875
+langcode: en
+status: true
+dependencies: {  }
+id: bootstrap_accordion_alert
+label: 'Bootstrap Accordion Alert'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
