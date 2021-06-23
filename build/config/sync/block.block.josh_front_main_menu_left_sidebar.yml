@@ -23,7 +23,9 @@ settings:
   follow_parent: child
   level: 2
   depth: 2
-  expand: false
+  expand_all_items: false
   parent: 'main:'
   suggestion: main__sidebar
+  label_type: block
+  label_link: false
 visibility: {  }
