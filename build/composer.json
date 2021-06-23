@@ -38,7 +38,7 @@
         "drupal/config_ignore": "^2.3",
         "drupal/config_split": "^1.7",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.8.0",
+        "drupal/core-recommended": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/devel": "^2.0",
         "drupal/diff": "^1.0",
@@ -66,7 +66,6 @@
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.8.0",
         "drupal/devel_php": "^1.3"
     },
     "conflict": {
