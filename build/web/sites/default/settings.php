@@ -788,6 +788,13 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 $config_directories['sync'] = '../config/sync';
 $settings['install_profile'] = 'standard';
 
+$settings['trusted_host_patterns'] = [
+  '^joshgraham\.id\.au$',
+  '^.+\.joshgraham\.id\.au$',
+  '^joshuagraham\.id\.au$',
+  '^.+\.joshuagraham\.id\.au$',
+];
+
 /**
  * Load local development override configuration, if available.
  *
