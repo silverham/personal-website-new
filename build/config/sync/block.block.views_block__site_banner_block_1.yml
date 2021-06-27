@@ -1,0 +1,24 @@
+uuid: e523c9fd-e704-4e1e-a443-5eb8e5391c38
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.site_banner
+  module:
+    - views
+  theme:
+    - josh_front
+id: views_block__site_banner_block_1
+theme: josh_front
+region: header
+weight: 0
+provider: null
+plugin: 'views_block:site_banner-block_1'
+settings:
+  id: 'views_block:site_banner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

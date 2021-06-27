@@ -1,0 +1,28 @@
+uuid: b229ab20-ffef-429c-9d22-d600ae6b4fa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_java_minisite
+    - media.type.java
+  module:
+    - minisite
+id: media.java.field_media_java_minisite
+field_name: field_media_java_minisite
+entity_type: media
+bundle: java
+label: 'Media Java Minisite'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: minisite\upload
+  file_extensions: 'zip tar'
+  max_filesize: ''
+  description_field: true
+  minisite_extensions: 'html htm js css png jpg gif svg pdf doc docx ppt pptx xls xlsx tif xml txt woff woff2 ttf eot ico class'
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: minisite

@@ -1,0 +1,17 @@
+uuid: 5f59afd4-3959-4837-b271-b24758f8225e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Error 403'
+type: error_403
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,33 @@
+uuid: dc452d18-325c-4ea7-8df7-5578e6706ea3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.java.field_java_entry_filename
+    - field.field.media.java.field_media_file
+    - field.field.media.java.field_media_java_minisite
+    - media.type.java
+  module:
+    - minisite
+id: media.java.default
+targetEntityType: media
+bundle: java
+mode: default
+content:
+  field_media_java_minisite:
+    weight: 0
+    label: hidden
+    settings:
+      minisite_link: content
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: minisite_link
+    region: content
+hidden:
+  created: true
+  field_java_entry_filename: true
+  field_media_file: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

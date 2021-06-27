@@ -1,0 +1,10 @@
+uuid: e24af7d3-3143-475f-8dd5-322d95c34d81
+langcode: en
+status: true
+dependencies: {  }
+id: extra_media_image
+label: 'Extra Media Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

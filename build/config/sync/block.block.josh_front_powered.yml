@@ -1,0 +1,22 @@
+uuid: 7220ea8e-e422-4bc6-9c24-49e25a44da93
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - josh_front
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: josh_front_powered
+theme: josh_front
+region: footer
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

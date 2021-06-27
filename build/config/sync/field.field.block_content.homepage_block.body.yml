@@ -1,0 +1,23 @@
+uuid: 72344670-76ad-4112-be2c-e032311ef98f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_block
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.homepage_block.body
+field_name: body
+entity_type: block_content
+bundle: homepage_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

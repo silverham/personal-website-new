@@ -1,0 +1,27 @@
+uuid: 51261a53-aaca-43f3-9c11-51165ca9c935
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - josh_front
+_core:
+  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+id: josh_front_breadcrumbs
+theme: josh_front
+region: breadcrumb
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

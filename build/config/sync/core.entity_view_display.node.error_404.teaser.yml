@@ -1,0 +1,31 @@
+uuid: c590c8fd-5192-4574-86b3-03a81b87a7ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.error_404.body
+    - node.type.error_404
+  module:
+    - text
+    - user
+id: node.error_404.teaser
+targetEntityType: node
+bundle: error_404
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

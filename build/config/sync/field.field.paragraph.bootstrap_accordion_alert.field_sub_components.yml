@@ -1,0 +1,62 @@
+uuid: 97a80e69-259f-490e-9254-8db1539ea1d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_components
+    - paragraphs.paragraphs_type.bootstrap_accordion_alert
+    - paragraphs.paragraphs_type.extra_body
+    - paragraphs.paragraphs_type.extra_code
+    - paragraphs.paragraphs_type.extra_embed_java
+    - paragraphs.paragraphs_type.extra_local_video
+    - paragraphs.paragraphs_type.extra_media_image
+    - paragraphs.paragraphs_type.extra_remote_video
+  module:
+    - entity_reference_revisions
+id: paragraph.bootstrap_accordion_alert.field_sub_components
+field_name: field_sub_components
+entity_type: paragraph
+bundle: bootstrap_accordion_alert
+label: 'Sub Components'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      extra_body: extra_body
+      extra_code: extra_code
+      extra_embed_java: extra_embed_java
+      extra_local_video: extra_local_video
+      extra_media_image: extra_media_image
+      extra_remote_video: extra_remote_video
+    target_bundles_drag_drop:
+      bootstrap_accordion:
+        weight: 9
+        enabled: false
+      bootstrap_accordion_alert:
+        weight: 10
+        enabled: false
+      extra_body:
+        enabled: true
+        weight: 11
+      extra_code:
+        enabled: true
+        weight: 12
+      extra_embed_java:
+        enabled: true
+        weight: 13
+      extra_local_video:
+        enabled: true
+        weight: 14
+      extra_media_image:
+        enabled: true
+        weight: 15
+      extra_remote_video:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions

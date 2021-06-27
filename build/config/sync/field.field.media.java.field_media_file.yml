@@ -1,0 +1,27 @@
+uuid: 9770089b-4a30-41a2-9cd6-dbe26a495df9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file
+    - media.type.java
+  module:
+    - file
+id: media.java.field_media_file
+field_name: field_media_file
+entity_type: media
+bundle: java
+label: File
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'txt doc docx pdf'
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

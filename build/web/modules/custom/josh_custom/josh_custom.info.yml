@@ -1,0 +1,6 @@
+name: Josh Custom
+description: Add custom functions.
+package: Josh
+
+type: module
+core: 8.x

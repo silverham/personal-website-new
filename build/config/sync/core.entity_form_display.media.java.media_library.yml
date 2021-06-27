@@ -1,0 +1,32 @@
+uuid: db2dd08d-bac8-4da6-93cd-3c604d64fa9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.java.field_java_entry_filename
+    - field.field.media.java.field_media_file
+    - field.field.media.java.field_media_java_minisite
+    - media.type.java
+id: media.java.media_library
+targetEntityType: media
+bundle: java
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_java_entry_filename: true
+  field_media_file: true
+  field_media_java_minisite: true
+  path: true
+  replace_file: true
+  status: true
+  uid: true

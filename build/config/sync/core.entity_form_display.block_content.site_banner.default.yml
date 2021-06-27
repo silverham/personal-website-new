@@ -1,0 +1,32 @@
+uuid: 865f3060-e1c4-418e-9075-855a6281203d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.site_banner
+    - field.field.block_content.site_banner.body
+    - field.field.block_content.site_banner.field_media_image
+  module:
+    - media_library
+id: block_content.site_banner.default
+targetEntityType: block_content
+bundle: site_banner
+mode: default
+content:
+  field_media_image:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true

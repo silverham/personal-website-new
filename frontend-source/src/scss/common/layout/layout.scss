@@ -1,0 +1,126 @@
+/**
+ * The Main css file for the website
+ */
+
+/**
+ *  The General Layout Parts
+ */
+.layout-container {
+	background-color: #f8f8f8;
+	margin-top: 1em;
+	border:1px solid #ccc;
+}
+
+/**
+ * Header.
+ */
+.site-logo {
+    display: inline-block;
+    padding-bottom: 10px;
+    // Center align - same as site name.
+    font-size: 2.5rem;
+    &:after {
+    	content: ' | ';
+    	color: #000;
+    }
+    &:hover {
+    	text-decoration: none;
+    }
+}
+
+.site-name {
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    // Look like h1.
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    a {
+    	color: #000;
+    }
+}
+
+#block-josh-front-main-menu.navigation.menu--main,
+#block-josh-front-footer.navigation.menu--footer {
+	> .menu {
+		background: #000;
+		border-color: #e7e7e7;
+		border-radius: 4px;
+		padding-left: 1em;
+		margin-left: 0;
+		margin-bottom: 10px;
+		> .menu-item {
+			@media (min-width: 768px) {
+				float: left;
+			}
+			a {
+				color: #777;
+				padding-top: 15px;
+    			line-height: 20px;
+    			display: block;
+    			padding: 10px 15px;
+    			text-decoration: none;
+    			padding-bottom: 13px;
+    			&.is-active {
+    				color: #ffffff;
+    			}
+    			&:hover {
+    				color: #ffffff;
+    				background-color: #3E3C3C;
+    			}
+			}
+		}
+		// Force border.
+		&:after {
+			clear: both;
+		    content: '';
+		    display: table;
+		}
+	}
+}
+
+.region-primary-menu:after {
+	clear: both;
+	content: '';
+	display: table;
+}
+
+.breadcrumb {
+	// Bootstrap has too much padding.
+	margin-bottom: 0;
+}
+
+.layout-content-container {
+	display: flex;
+
+	&.has-sidebars {
+		.layout-sidebar-first {
+			flex: 1;
+			order: 0;
+		}
+		.layout-content {
+			flex: 4;
+			order: 1;
+		}
+		.layout-sidebar-second {
+			flex: 1;
+			order: 2;
+		}
+	}
+	.layout-content {
+		padding: 10px;
+   		padding-top: 0;
+	}
+	.layout-sidebar-second {
+		padding-bottom: 1em;
+	}
+}
+
+/*
+ * Stop images expanding past their parent div.
+ */
+img {
+	max-width:100%;
+	max-height:100%;
+}

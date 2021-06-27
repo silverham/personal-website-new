@@ -1,0 +1,8 @@
+uuid: 7dbb6f0d-6f82-4b1c-b58c-91beb687c606
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_block
+label: 'Homepage Block'
+revision: 1
+description: ''

@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Boostrap sub-theme.
+ *
+ * Place your custom PHP code, such as preprocess hooks,
+ * in a inc file, which is included by this file.
+ */
+
+$theme_dir = __DIR__;
+$theme_name = 'josh_front';
+
+/**
+ * Include template functions from the includes folder.
+ *
+ * Naming convention for inlclude files should be {theme_name}.{file_name}.inc.
+ */
+$include_locations = [
+  "includes/{$theme_name}.*.inc",
+  "includes/*/{$theme_name}.*.inc",
+  "includes/*/*/{$theme_name}.*.inc",
+];
+
+foreach ($include_locations as $include_location) {
+  foreach (glob("{$theme_dir}/{$include_location}") as $filename) {
+    require_once $filename;
+  }
+}

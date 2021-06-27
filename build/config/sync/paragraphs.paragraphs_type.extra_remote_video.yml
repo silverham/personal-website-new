@@ -1,0 +1,10 @@
+uuid: f09272c1-0885-426b-a72e-8366f68dffc4
+langcode: en
+status: true
+dependencies: {  }
+id: extra_remote_video
+label: 'Extra Remote Video'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

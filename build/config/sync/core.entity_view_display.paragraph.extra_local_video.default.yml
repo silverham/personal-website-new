@@ -1,0 +1,23 @@
+uuid: 7ec98aa9-ce20-43cd-ae91-ad87e556d49d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.extra_local_video.field_media_local_video
+    - paragraphs.paragraphs_type.extra_local_video
+id: paragraph.extra_local_video.default
+targetEntityType: paragraph
+bundle: extra_local_video
+mode: default
+content:
+  field_media_local_video:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,17 @@
+uuid: 8008b2cb-7736-4d47-8bf5-4be7ca81fe19
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Error 404'
+type: error_404
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

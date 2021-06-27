@@ -1,0 +1,31 @@
+uuid: 3a69859f-de53-4dab-8de1-fc1568d60078
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sidebar_block:979a0a9d-5767-4260-9758-a8fb2502cb93'
+  module:
+    - block_content
+    - system
+  theme:
+    - josh_front
+id: sidebar
+theme: josh_front
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:979a0a9d-5767-4260-9758-a8fb2502cb93'
+settings:
+  id: 'block_content:979a0a9d-5767-4260-9758-a8fb2502cb93'
+  label: Sidebar
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

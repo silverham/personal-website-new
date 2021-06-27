@@ -1,0 +1,8 @@
+uuid: 4398b928-c5b1-4ea2-9d33-e8f6328765bf
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_block
+label: 'Sidebar Block'
+revision: 1
+description: ''

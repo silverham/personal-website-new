@@ -1,0 +1,22 @@
+uuid: bcc3af45-390d-40dd-9df8-82d97559a4bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.error_403
+id: node.error_403.promote
+field_name: promote
+entity_type: node
+bundle: error_403
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

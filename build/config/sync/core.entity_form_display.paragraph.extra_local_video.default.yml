@@ -1,0 +1,24 @@
+uuid: 1fb7b13b-906a-4e2c-ad3c-e8575af98a85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.extra_local_video.field_media_local_video
+    - paragraphs.paragraphs_type.extra_local_video
+  module:
+    - media_library
+id: paragraph.extra_local_video.default
+targetEntityType: paragraph
+bundle: extra_local_video
+mode: default
+content:
+  field_media_local_video:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
