@@ -181,3 +181,8 @@ $databases['default']['default'] = [
 // Leave uncommented on PROD.
 // @see https://www.drupal.org/docs/8/modules/configuration-split/creating-a-simple-split-configuration-dev-modules-only-in-dev
 $config['config_split.config_split.dev']['status'] = TRUE;
+
+// Set encryption 256 bits base 64 key.
+// @see https://git.drupalcode.org/project/key/-/blob/8.x-1.x/src/Plugin/KeyProvider/EnvKeyProvider.php#L98
+putenv('TFA_ENCRYPTION_KEY=mybase64key');
+
