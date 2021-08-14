@@ -18,7 +18,7 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: minisite\upload
+  file_directory: minisite/upload
   file_extensions: 'zip tar'
   max_filesize: ''
   description_field: true
