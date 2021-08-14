@@ -125,6 +125,11 @@
             "drupal/core": "-p2"
         },
         "drupal-scaffold": {
+            "file-mapping": {
+                "[web-root]/.htaccess": {
+                  "append": "web-patches/htaccess-append.txt"
+                }
+            },
             "locations": {
                 "web-root": "web/"
             }
