@@ -785,7 +785,7 @@ $settings['entity_update_backup'] = TRUE;
  */
 $settings['migrate_node_migrate_type_classic'] = FALSE;
 
-$config_directories['sync'] = '../config/sync';
+$settings['config_sync_directory'] = '../config/sync';
 $settings['install_profile'] = 'standard';
 
 $settings['trusted_host_patterns'] = [
