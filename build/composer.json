@@ -10,10 +10,26 @@
         }
     ],
     "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
+		{
+			"type": "composer",
+			"url": "https://packages.drupal.org/8",
+			"exclude": [
+				"drupal/events_log_track"
+			]
+		},
+		{
+		 	"type": "package",
+		 	"package": {
+			 	"name": "drupal/events_log_track",
+			 	"version": "dev-custom",
+			 	"type": "drupal-module",
+			 	"source": {
+			 		"type": "git",
+			 		"url": "https://git.drupalcode.org/issue/events_log_track-3179438.git",
+			 		"reference": "3179438-drupal-9-compatibility"
+			 	}
+	 		}
+	 	},
         {
             "type": "package",
             "package": {
@@ -42,7 +58,7 @@
         "drupal/core-recommended": "^8.8.0",
         "drupal/devel": "^2.0",
         "drupal/diff": "^1.0",
-        "drupal/events_log_track": "^2.0",
+        "drupal/events_log_track": "dev-custom#289e313c04908a7780f3c6b4a8937fc642b3ec72",
         "drupal/field_group": "^3.1",
         "drupal/ga_login": "^1.0@alpha",
         "drupal/google_analytics": "^3.0",
