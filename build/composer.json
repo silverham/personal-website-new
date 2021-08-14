@@ -10,10 +10,26 @@
         }
     ],
     "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
+		{
+			"type": "composer",
+			"url": "https://packages.drupal.org/8",
+			"exclude": [
+				"drupal/events_log_track"
+			]
+		},
+		{
+		 	"type": "package",
+		 	"package": {
+			 	"name": "drupal/events_log_track",
+			 	"version": "dev-custom",
+			 	"type": "drupal-module",
+			 	"source": {
+			 		"type": "git",
+			 		"url": "https://git.drupalcode.org/issue/events_log_track-3179438.git",
+			 		"reference": "3179438-drupal-9-compatibility"
+			 	}
+	 		}
+	 	},
         {
             "type": "package",
             "package": {
@@ -31,22 +47,22 @@
         "php": ">=7.0.8",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
-        "drupal/admin_toolbar": "^2.4",
+        "drupal/admin_toolbar": "^3.0",
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/adminimal_theme": "^1.6",
         "drupal/chosen": "^3.0",
         "drupal/config_ignore": "^2.3",
         "drupal/config_split": "^1.7",
         "drupal/console": "^1.0.2",
-        "drupal/core-composer-scaffold": "^8.8.0",
-        "drupal/core-recommended": "^8.8.0",
-        "drupal/devel": "^2.0",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-recommended": "^9",
+        "drupal/devel": "^4.0",
         "drupal/diff": "^1.0",
-        "drupal/events_log_track": "^2.0",
+        "drupal/events_log_track": "dev-custom#289e313c04908a7780f3c6b4a8937fc642b3ec72",
         "drupal/field_group": "^3.1",
         "drupal/ga_login": "^1.0@alpha",
         "drupal/google_analytics": "^3.0",
-        "drupal/linkit": "^4.3",
+        "drupal/linkit": "^6.0.0-beta2",
         "drupal/media_entity_file_replace": "^1.0@beta",
         "drupal/menu_block": "^1.6",
         "drupal/metatag": "^1.2",
@@ -64,6 +80,7 @@
         "drupal/twig_tweak": "^2.9",
         "drupal/webform": "^6.0",
         "drush/drush": "^9.7.1 | ^10.0.0",
+        "kint-php/kint": "^3.3",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
         "zaporylie/composer-drupal-optimizations": "^1.0"
@@ -108,6 +125,11 @@
             "drupal/core": "-p2"
         },
         "drupal-scaffold": {
+            "file-mapping": {
+                "[web-root]/.htaccess": {
+                  "append": "web-patches/htaccess-append.txt"
+                }
+            },
             "locations": {
                 "web-root": "web/"
             }
@@ -124,9 +146,6 @@
         "patches": {
             "drupal/core": {
                 "Private file download returns access denied, when file attached to revision other than current - https://www.drupal.org/project/drupal/issues/1452100#comment-13653216": "https://www.drupal.org/files/issues/2020-05-29/1452100-file-access-97.patch"
-            },
-            "drupal/devel": {
-                "Deprecated curly brace syntax for accessing array elements": "https://www.drupal.org/files/issues/2020-01-05/3104423.patch"
             },
             "drupal/events_log_track": {
                 "Event logs for change in workflows - https://www.drupal.org/project/events_log_track/issues/2974170": "https://www.drupal.org/files/issues/2018-06-26/events_log_track-add-workflows-2974170-7.patch",
