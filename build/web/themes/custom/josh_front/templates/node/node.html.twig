@@ -97,7 +97,7 @@
       {# Add small class for bootstrap gray colour. #}
       <div{{ author_attributes.addClass('node__submitted', 'small') }}>
         {# Override author display format. #}
-        {% trans %}Posted on{% endtrans %} {{ node.getCreatedTime|date('F n, Y') }}
+        {% trans %}Posted on{% endtrans %} {{ node.getCreatedTime|date('F j, Y') }}
         {# {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %} #}
         {{ metadata }}
       </div>
