@@ -75,22 +75,32 @@
 .breadcrumb {
   margin-bottom: 0; }
 
-.layout-content-container {
-  display: flex; }
+@media (min-width: 768px) {
+  .layout-content-container {
+    display: flex; } }
+
+@media (min-width: 768px) {
   .layout-content-container.has-sidebars .layout-sidebar-first {
     flex: 1;
-    order: 0; }
+    order: 0; } }
+
+@media (min-width: 768px) {
   .layout-content-container.has-sidebars .layout-content {
     flex: 4;
-    order: 1; }
+    order: 1;
+    margin-right: 70px; } }
+
+@media (min-width: 768px) {
   .layout-content-container.has-sidebars .layout-sidebar-second {
     flex: 1;
-    order: 2; }
-  .layout-content-container .layout-content {
-    padding: 10px;
-    padding-top: 0; }
-  .layout-content-container .layout-sidebar-second {
-    padding-bottom: 1em; }
+    order: 2; } }
+
+.layout-content-container .layout-content {
+  padding: 10px;
+  padding-top: 0; }
+
+.layout-content-container .layout-sidebar-second {
+  padding-bottom: 1em; }
 
 /*
  * Stop images expanding past their parent div.
@@ -104,5 +114,8 @@ img {
   #block-josh-front-main-menu-left-sidebar.navigation.menu--main a.is-active, #block-josh-front-main-menu-left-sidebar.navigation.menu--main a.is-active:hover, #block-josh-front-main-menu-left-sidebar.navigation.menu--main a.is-active:focus {
     color: #fff;
     background-color: #428bca; }
+
+.layout-sidebar-first h2, .layout-sidebar-second h2 {
+  font-size: 24px; }
 
 /*# sourceMappingURL=main.css.map */
