@@ -448,17 +448,34 @@ display:
           id: created_year_month
           table: node_field_data
           field: created_year_month
+          relationship: none
+          group_type: group
+          admin_label: ''
           default_action: summary
           exception:
+            value: all
             title_enable: true
+            title: All
           title_enable: true
           title: '{{ arguments.created_year_month }}'
           default_argument_type: fixed
-          summary:
-            format: default_summary
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
           summary_options:
+            base_path: ''
+            count: true
             items_per_page: 30
+            override: false
+          summary:
+            sort_order: desc
+            number_of_records: 0
+            format: default_summary
           specify_validation: true
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
           plugin_id: date_year_month
           entity_type: node
       display_extenders: {  }
