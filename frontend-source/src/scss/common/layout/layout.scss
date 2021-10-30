@@ -92,20 +92,28 @@
 }
 
 .layout-content-container {
-	display: flex;
-
+	@media (min-width: 768px) {
+		display: flex;
+	}
 	&.has-sidebars {
 		.layout-sidebar-first {
-			flex: 1;
-			order: 0;
+			@media (min-width: 768px) {
+				flex: 1;
+				order: 0;
+			}
 		}
 		.layout-content {
-			flex: 4;
-			order: 1;
+			@media (min-width: 768px) {
+				flex: 4;
+				order: 1;
+				margin-right: 70px;
+			}
 		}
 		.layout-sidebar-second {
-			flex: 1;
-			order: 2;
+			@media (min-width: 768px) {
+				flex: 1;
+				order: 2;
+			}
 		}
 	}
 	.layout-content {

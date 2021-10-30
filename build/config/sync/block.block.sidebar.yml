@@ -6,13 +6,12 @@ dependencies:
     - 'block_content:sidebar_block:979a0a9d-5767-4260-9758-a8fb2502cb93'
   module:
     - block_content
-    - system
   theme:
     - josh_front
 id: sidebar
 theme: josh_front
 region: sidebar_second
-weight: 0
+weight: -5
 provider: null
 plugin: 'block_content:979a0a9d-5767-4260-9758-a8fb2502cb93'
 settings:
@@ -23,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }
+visibility: {  }

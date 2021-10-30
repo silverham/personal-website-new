@@ -12,3 +12,13 @@
         }
     }
 }
+
+// Make h2 look like h3 in the sidebar.
+.layout-sidebar {
+    &-first,
+    &-second {
+        h2 {
+            font-size: 24px;
+        }
+    }
+}
