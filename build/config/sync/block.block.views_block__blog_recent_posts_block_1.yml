@@ -1,0 +1,29 @@
+uuid: 948b86a1-c6f2-48ec-84dd-1633872a776d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog_recent_posts
+  module:
+    - system
+    - views
+  theme:
+    - josh_front
+id: views_block__blog_recent_posts_block_1
+theme: josh_front
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'views_block:blog_recent_posts-block_1'
+settings:
+  id: 'views_block:blog_recent_posts-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/blog\r\n/blog/*"
+    negate: false
