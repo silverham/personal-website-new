@@ -61,7 +61,7 @@
         "drupal/events_log_track": "dev-custom#289e313c04908a7780f3c6b4a8937fc642b3ec72",
         "drupal/field_group": "^3.1",
         "drupal/ga_login": "^1.0@alpha",
-        "drupal/google_analytics": "^3.0",
+        "drupal/google_analytics": "^4.0.2",
         "drupal/linkit": "^6.0.0-beta2",
         "drupal/media_entity_file_replace": "^1.0@beta",
         "drupal/menu_block": "^1.6",
@@ -154,9 +154,6 @@
             "drupal/events_log_track": {
                 "Event logs for change in workflows - https://www.drupal.org/project/events_log_track/issues/2974170": "https://www.drupal.org/files/issues/2018-06-26/events_log_track-add-workflows-2974170-7.patch",
                 "Add handlers for file and media entities - https://www.drupal.org/project/events_log_track/issues/2959769": "https://www.drupal.org/files/issues/2018-06-26/events-log-track_add-file-media-2959769-9.patch"
-            },
-            "drupal/google_analytics": {
-               "Fatal error when there is a view with the path search/node":  "https://www.drupal.org/files/issues/2018-06-18/patch_google_analytics.patch"
             },
             "drupal/swiftmailer": {
                 "Exception on sending (probably when from/to malformed) - https://www.drupal.org/project/swiftmailer/issues/3167898":
