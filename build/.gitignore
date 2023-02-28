@@ -27,3 +27,6 @@
 /web/sites/development.services.yml
 /.editorconfig
 /.gitattributes
+# From Cpanel
+/web/error_log
+

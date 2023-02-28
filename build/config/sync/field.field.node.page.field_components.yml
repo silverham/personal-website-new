@@ -28,7 +28,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       extra_body: extra_body
       bootstrap_accordion: bootstrap_accordion
@@ -38,29 +37,30 @@ settings:
       extra_local_video: extra_local_video
       extra_media_image: extra_media_image
       extra_remote_video: extra_remote_video
+    negate: 0
     target_bundles_drag_drop:
       bootstrap_accordion:
-        enabled: true
         weight: 8
+        enabled: true
       bootstrap_accordion_alert:
-        enabled: true
         weight: 10
+        enabled: true
       extra_body:
-        enabled: true
         weight: 7
+        enabled: true
       extra_code:
-        enabled: true
         weight: 8
+        enabled: true
       extra_embed_java:
-        enabled: true
         weight: 9
+        enabled: true
       extra_local_video:
-        enabled: true
         weight: 10
+        enabled: true
       extra_media_image:
-        enabled: true
         weight: 11
-      extra_remote_video:
         enabled: true
+      extra_remote_video:
         weight: 12
+        enabled: true
 field_type: entity_reference_revisions

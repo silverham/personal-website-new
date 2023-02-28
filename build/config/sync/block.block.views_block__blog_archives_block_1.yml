@@ -18,12 +18,12 @@ plugin: 'views_block:blog_archives-block_1'
 settings:
   id: 'views_block:blog_archives-block_1'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: "/blog\r\n/blog/*"
     negate: false
+    pages: "/blog\r\n/blog/*"
