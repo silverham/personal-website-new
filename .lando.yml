@@ -36,6 +36,10 @@ services:
         apt-get install pv &&
         echo "#### (database) PV Install done. ####";
         fi
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
   nodejs:
     type: node:custom
     # No need for lando to check if this app is healthy on startup. 

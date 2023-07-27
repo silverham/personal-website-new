@@ -854,6 +854,12 @@ if (!empty($lando_info)) {
   // Trusted host pattern settings.
   $settings['trusted_host_patterns'][] = '\.lndo\.site$';
   $settings['trusted_host_patterns'][] = '\.docker\.amazee\.io$';
+
+  # Symfony Mailer module sendmail commands for lando mailhog.
+  $settings['mailer_sendmail_commands'] = [
+    ini_get('sendmail_path') . ' -t'
+  ];
+  $config['symfony_mailer.mailer_transport.sendmail']['configuration']['query']['command'] = ini_get('sendmail_path') . ' -t';
 }
 
 /**
