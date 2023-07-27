@@ -1,1 +1,3 @@
 /git_ignored
+/.lando.local.yml
+/build/web/sites/default/development.services.local.yml

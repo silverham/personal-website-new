@@ -7,7 +7,7 @@
 
 // Including plugins.
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var babel = require('gulp-babel');
 var path = require('path');
 var del = require('del');
@@ -75,7 +75,7 @@ gulp.task('compile-js', function (done) {
   // Create source map - END.
   .pipe(gulp.dest(destination + '/js'))
   .pipe(browserSync.reload({ stream: true, match: '**/*.js' }))
-  .pipe(notify({message: 'Rebuild all custom scripts. Please refresh your browser', onLast: true}));
+  //.pipe(notify({message: 'Rebuild all custom scripts. Please refresh your browser', onLast: true}));
 
   done();
 });
