@@ -1,0 +1,10 @@
+uuid: c31c8d7d-f688-4215-9178-6b0e24e8a9c1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: u5MXordtBE3SIs1x4qEUEBUFctQ0jjSn2vbPtgxvXuM
+name: 'Email HTML'
+format: email_html
+weight: 0
+filters: {  }
