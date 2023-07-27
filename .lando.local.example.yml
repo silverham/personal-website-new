@@ -1,1 +1,6 @@
 name: josh-personal-website-dev
+proxy:
+  appserver:
+    - josh-personal-website-dev-web.lndo.site
+  mailhog:
+    - josh-personal-website-dev-mailhog.lndo.site
