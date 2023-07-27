@@ -1,0 +1,67 @@
+name: josh-personal-website-default
+recipe: drupal9
+config:
+  php: '8.1'
+  via: apache:2.4
+  webroot: build/web
+  # Cpanel is 10.6.4
+  database: mariadb:10.6
+  drush: false
+  xdebug: false
+services:
+  appserver:
+    scanner: false
+    build_as_root:
+      - |
+        if dpkg --get-selections pv 2> /dev/null | grep -q pv; then
+        # Run this if true,
+        echo "#### (database) PV is already installed. ####";
+        else
+        # Run this if false.
+        echo "#### (database) Installing PV. ####" &&
+        apt-get --allow-releaseinfo-change-suite update &&
+        apt-get install pv &&
+        echo "#### (database) PV Install done. ####";
+        fi
+  database:
+    build_as_root:
+      - |
+        if dpkg --get-selections pv 2> /dev/null | grep -q pv; then
+        # Run this if true,
+        echo "#### (database) PV is already installed. ####";
+        else
+        # Run this if false.
+        echo "#### (database) Installing PV. ####" &&
+        apt-get --allow-releaseinfo-change-suite update &&
+        apt-get install pv &&
+        echo "#### (database) PV Install done. ####";
+        fi
+  nodejs:
+    type: node:custom
+    # No need for lando to check if this app is healthy on startup. 
+    scanner: false
+    overrides:
+      build:
+        # Set custom build folder for caching.
+        # @see https://github.com/lando/lando/issues/740#issuecomment-390283833
+        # From https://www.reddit.com/r/drupal/comments/iwyep9/comment/g64czta/
+        dockerfile: .lando/nodejs.Dockerfile
+        # Build context for `docker build`, since the dockerfile is in a subdirectory.
+        context: .
+tooling:
+  composer:
+    service: appserver
+    cmd: php -d memory_limit=-1 /usr/local/bin/composer
+    dir: /app/build
+  drush:
+    service: appserver
+    cmd: /app/build/vendor/bin/drush
+    dir: /app/build
+  npm:
+    service: nodejs
+    cmd: npm
+    dir: /app/frontend-source
+  gulp:
+    service: nodejs
+    cmd: gulp
+    dir: /app/frontend-source

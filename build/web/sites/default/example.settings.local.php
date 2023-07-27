@@ -38,7 +38,7 @@
 /**
  * Enable local development services.
  */
-$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/development.services.local.yml';
 
 /**
  * Show all error messages, with backtrace information.
@@ -163,19 +163,19 @@ $settings['skip_permissions_hardening'] = TRUE;
 
 $settings['hash_salt'] = 'A RANDOM VALUE A RANDOM VALUE A RANDOM VALUE A RANDOM VALUE A RANDOM VALUE';
 
-/**
- * Database settings.
- */
-$databases['default']['default'] = [
-  'database' => 'mydb',
-  'username' => 'myusername',
-  'password' => 'mypassword',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-];
+// /**
+//  * Database settings.
+//  */
+// $databases['default']['default'] = [
+//   'database' => 'mydb',
+//   'username' => 'myusername',
+//   'password' => 'mypassword',
+//   'prefix' => '',
+//   'host' => 'localhost',
+//   'port' => '3306',
+//   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+//   'driver' => 'mysql',
+// ];
 
 // Dev config used.
 // Leave uncommented on PROD.

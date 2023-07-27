@@ -795,6 +795,35 @@ $settings['trusted_host_patterns'] = [
   '^.+\.joshuagraham\.id\.au$',
 ];
 
+$lando_info = json_decode(getenv('LANDO_INFO'), TRUE);
+if (!empty($lando_info)) {
+ 
+  // Define this site's default database. Be sure to change ‘multisite2’ to the same identifier that
+  // you use under ‘services’ for the second site in your .lando.yml file.
+  $databases['default']['default'] = [
+    'database' => $lando_info['database']['creds']['database'],
+    'username' => $lando_info['database']['creds']['user'],
+    'password' => $lando_info['database']['creds']['password'],
+    'host' => $lando_info['database']['internal_connection']['host'],
+    'port' => $lando_info['database']['internal_connection']['port'],
+    'prefix' => '',
+    'collation' => 'utf8mb4_general_ci',
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'driver' => 'mysql',
+    'init_commands' => [
+      'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
+    ],
+  ];
+  // Disable google_analytics in Dev.
+  $config['google_analytics.settings']['account'] = 'UA-XXXXXXXX-YY';
+
+  $settings['hash_salt'] = 'A RANDOM VALUE A RANDOM VALUE A RANDOM VALUE A RANDOM VALUE A RANDOM VALUE';
+ 
+  // Trusted host pattern settings.
+  $settings['trusted_host_patterns'][] = '\.lndo\.site$';
+  $settings['trusted_host_patterns'][] = '\.docker\.amazee\.io$';
+}
+
 /**
  * Load local development override configuration, if available.
  *
