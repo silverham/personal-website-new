@@ -824,6 +824,9 @@ $settings['trusted_host_patterns'] = [
   '^.+\.joshuagraham\.id\.au$',
 ];
 
+$settings['file_private_path'] = $site_path . '/files/private';
+$settings['file_temp_path'] = $app_root . '/' . $site_path . '/files/private/tmp';
+
 $lando_info = json_decode(getenv('LANDO_INFO'), TRUE);
 if (!empty($lando_info)) {
  
