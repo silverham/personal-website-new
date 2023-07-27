@@ -10,19 +10,11 @@ you need to provide the following arguments:
   2) Username of the user that you want to give files/directories ownership.
   3) HTTPD group name (defaults to www-data for Apache).
 
-Usage: (sudo) bash ${0##*/} --drupal_path=PATH --drupal_user=USER --httpd_group=GROUP
-Example: (sudo) bash ${0##*/} --drupal_path=/usr/local/apache2/htdocs --drupal_user=john --httpd_group=www-data
+Usage: bash ${0##*/} --drupal_path=PATH --drupal_user=USER --httpd_group=GROUP
+Example: bash ${0##*/} --drupal_path=/usr/local/apache2/htdocs --drupal_user=john --httpd_group=www-data
 HELP
 exit 0
 }
-
-if [ $(id -u) != 0 ]; then
-  printf "*************************************************\n"
-  printf "* Error: You must run this with sudo or root *\n"
-  printf "*************************************************\n"
-  print_help
-  exit 1
-fi
 
 drupal_path=${1%/}
 drupal_user=${2}
@@ -70,20 +62,11 @@ cd $drupal_path
 printf "Changing ownership of all contents of \"${drupal_path}\":\n user => \"${drupal_user}\" \t group => \"${httpd_group}\"\n"
 chown -R ${drupal_user}:${httpd_group} .
 
-printf "Changing permissions of all directories inside \"${drupal_path}\" to \"rwxr-x---\"...\n"
-find . -type d -exec chmod u=rwx,g=rx,o= '{}' \;
+# @see https://forum.openlitespeed.org/threads/what-should-be-the-permission-for-the-wordpress-folder.3922/#post-7485
+printf "Changing permissions of all directories inside \"${drupal_path}\" to 755...\n"
+find . -type d -exec chmod 755 {} \;
 
-printf "Changing permissions of all files inside \"${drupal_path}\" to \"rw-r-----\"...\n"
-find . -type f -exec chmod u=rw,g=r,o= '{}' \;
+printf "Changing permissions of all files inside \"${drupal_path}\" to 644...\n"
+find . -type f -exec chmod 644 {} \;
 
-printf "Changing permissions of \"files\" directories in \"${drupal_path}/sites\" to \"rwxrwx---\"...\n"
-cd sites
-find . -type d -name files -exec chmod ug=rwx,o= '{}' \;
-
-printf "Changing permissions of all files inside all \"files\" directories in \"${drupal_path}/sites\" to \"rw-rw----\"...\n"
-printf "Changing permissions of all directories inside all \"files\" directories in \"${drupal_path}/sites\" to \"rwxrwx---\"...\n"
-for x in ./*/files; do
-  find ${x} -type d -exec chmod ug=rwx,o= '{}' \;
-  find ${x} -type f -exec chmod ug=rw,o= '{}' \;
-done
 echo "Done setting proper permissions on files and directories"
