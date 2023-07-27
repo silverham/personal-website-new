@@ -15,13 +15,13 @@ bundle: java
 mode: default
 content:
   field_media_java_minisite:
-    weight: 0
+    type: minisite_link
     label: hidden
     settings:
-      minisite_link: content
       use_description_as_link_text: true
+      minisite_link: content
     third_party_settings: {  }
-    type: minisite_link
+    weight: 0
     region: content
 hidden:
   created: true

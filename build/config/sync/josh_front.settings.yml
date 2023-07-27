@@ -1,13 +1,13 @@
-schemas: {  }
 _core:
   default_config_hash: 1uFogeFphl0Hg6oVCacZZ8mM_0wMZ7PS_RrmLbK5tf0
+favicon:
+  use_default: true
 features:
-  node_user_picture: true
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
+  node_user_picture: true
 logo:
-  use_default: false
   path: themes/custom/josh_front/logo.png
-favicon:
-  use_default: true
+  use_default: false
+schemas: {  }

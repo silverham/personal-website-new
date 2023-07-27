@@ -26,7 +26,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       extra_body: extra_body
       extra_code: extra_code
@@ -34,28 +33,29 @@ settings:
       extra_local_video: extra_local_video
       extra_media_image: extra_media_image
       extra_remote_video: extra_remote_video
+    negate: 0
     target_bundles_drag_drop:
       bootstrap_accordion:
         weight: 9
         enabled: false
       extra_body:
-        enabled: true
         weight: 10
+        enabled: true
       extra_code:
-        enabled: true
         weight: 11
+        enabled: true
       extra_embed_java:
-        enabled: true
         weight: 12
+        enabled: true
       extra_local_video:
-        enabled: true
         weight: 13
+        enabled: true
       extra_media_image:
-        enabled: true
         weight: 14
-      extra_remote_video:
         enabled: true
+      extra_remote_video:
         weight: 15
+        enabled: true
       sub_components:
         weight: 16
         enabled: false
