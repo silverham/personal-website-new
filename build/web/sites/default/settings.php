@@ -840,7 +840,7 @@ if (!empty($lando_info)) {
     'port' => $lando_info['database']['internal_connection']['port'],
     'prefix' => '',
     'collation' => 'utf8mb4_general_ci',
-    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
     'driver' => 'mysql',
     'init_commands' => [
       'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
